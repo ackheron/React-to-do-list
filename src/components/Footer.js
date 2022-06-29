@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import {
   FaListAlt,
@@ -6,6 +5,7 @@ import {
   FaPlusSquare,
   FaTrash,
 } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,15 +14,15 @@ const Footer = () => {
       id="mainFooter"
     >
       <div className="btn-group">
-        <a href="#" className="btn btn-outline-dark bg-light">
+        <NavLink to="/" className="btn btn-outline-dark bg-light">
           <FaListAlt />
-        </a>
-        <a href="#" className="btn btn-outline-dark bg-light">
+        </NavLink>
+        <NavLink to="#" className="btn btn-outline-dark bg-light">
           <FaCheckSquare />
-        </a>
-        <a href="#" className="btn btn-outline-dark bg-light">
+        </NavLink>
+        <NavLink to="/add-task" className="btn btn-outline-dark bg-light">
           <FaPlusSquare />
-        </a>
+        </NavLink>
       </div>
       <button className="btn btn-outline-dark bg-light">
         <FaTrash />

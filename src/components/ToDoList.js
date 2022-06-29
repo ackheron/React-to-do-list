@@ -2,32 +2,27 @@ import React from "react";
 
 const ToDoList = () => {
   return (
-    <ul className="list-group m-3">
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Ranger la vaisselle
-        <button className="btn btn-sm ml-auto btn-outline-success">
-          &#x2713;
-        </button>
-      </li>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Répondre appel d'offres
-        <button className="btn btn-sm ml-auto btn-outline-success">
-          &#x2713;
-        </button>
-      </li>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Signer contrat
-        <button className="btn btn-sm ml-auto btn-outline-success">
-          &#x2713;
-        </button>
-      </li>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Ranger la salon
-        <button className="btn btn-sm ml-auto btn-outline-success">
-          &#x2713;
-        </button>
-      </li>
-    </ul>
+    <div>
+      <h1 ss="m-3">Liste de tâches</h1>
+      <ul ss="list-group m-3">
+        <li ss="list-group-item d-flex justify-content-between align-items-center">
+          Ranger la vaisselle
+          <button ss="btn btn-sm ml-auto btn-outline-success">&#x2713;</button>
+        </li>
+        <li ss="list-group-item d-flex justify-content-between align-items-center">
+          Répondre appel d'offres
+          <button ss="btn btn-sm ml-auto btn-outline-success">&#x2713;</button>
+        </li>
+        <li ss="list-group-item d-flex justify-content-between align-items-center">
+          Signer contrat
+          <button ss="btn btn-sm ml-auto btn-outline-success">&#x2713;</button>
+        </li>
+        <li ss="list-group-item d-flex justify-content-between align-items-center">
+          Ranger la salon
+          <button ss="btn btn-sm ml-auto btn-outline-success">&#x2713;</button>
+        </li>
+      </ul>
+    </div>
   );
 };
 
