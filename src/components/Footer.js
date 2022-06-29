@@ -17,7 +17,7 @@ const Footer = () => {
         <NavLink to="/" className="btn btn-outline-dark bg-light">
           <FaListAlt />
         </NavLink>
-        <NavLink to="#" className="btn btn-outline-dark bg-light">
+        <NavLink to="/completed" className="btn btn-outline-dark bg-light">
           <FaCheckSquare />
         </NavLink>
         <NavLink to="/add-task" className="btn btn-outline-dark bg-light">

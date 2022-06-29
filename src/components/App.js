@@ -22,7 +22,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/add-task" element={<AddTask />} />
-          <Route path="/" element={<ToDoList />} />
+          <Route path="/*" element={<ToDoList />} />
         </Routes>
         <Footer />
       </BrowserRouter>
