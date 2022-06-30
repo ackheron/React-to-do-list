@@ -6,6 +6,7 @@ import React from "react";
 import { createRoot } from "react-dom/client"; // depuis React 18
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./components/App";
+import "./css/toDo.css";
 
 // Ancienne méthode de rendu avant React 18
 // ReactDOM.render(<App />, document.getElementById("root"));
