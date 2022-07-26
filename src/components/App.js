@@ -12,7 +12,10 @@ const App = () => {
         <Switch>
           <Route path="/add-task" component={AddTask} />
 
-          <Route path="/" component={ToDoList} />
+          <Route
+            path="/:filter?"
+            render={(props) => <ToDoList {...props} tasks={initialData} />}
+          />
         </Switch>
         <Footer />
       </Router>
