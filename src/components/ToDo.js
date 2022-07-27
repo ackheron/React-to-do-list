@@ -15,14 +15,14 @@ class ToDo extends React.Component {
       <li
         className={
           "list-group-item d-flex justify-content-between align-items-center " +
-          (this.state.completed ? "bg-succes" : null)
+          (this.state.completed ? "bg-success" : null)
         }
       >
         {this.props.task.name}
         <button
           className={
             "btn btn-sm ml-auto " +
-            (this.state.completed ? "btn-success" : "btn-ouline-success")
+            (this.state.completed ? "btn-success" : "btn-outline-success")
           }
           onClick={() => this.toggleCompleted()}
         >
