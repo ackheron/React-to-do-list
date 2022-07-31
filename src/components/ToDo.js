@@ -5,11 +5,13 @@ class ToDo extends React.Component {
     completed: this.props.task.completed,
   };
 
-  toggleCompleted = () => {
+  ToggleCompleted = () => {
     this.setState((prevState) => ({
       completed: !prevState.completed,
     }));
+    this.props.onToggleCompleted(this.props.task.id);
   };
+
   render() {
     return (
       <li
@@ -24,7 +26,7 @@ class ToDo extends React.Component {
             "btn btn-sm ml-auto " +
             (this.state.completed ? "btn-success" : "btn-outline-success")
           }
-          onClick={() => this.toggleCompleted()}
+          onClick={() => this.ToggleCompleted()}
         >
           &#x2713;
         </button>
