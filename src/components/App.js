@@ -1,4 +1,5 @@
 import React from "react";
+import uniqueid from "uniqueid";
 import ToDoList from "./ToDoList";
 import Footer from "./Footer";
 import AddTask from "./AddTask";
@@ -20,12 +21,29 @@ export default class App extends React.Component {
       })
     );
   };
+
+  onAddTask = (newTaskName) => {
+    let newTask = {
+      id: uniqueid(),
+      name: newTaskName,
+      completed: false,
+    };
+
+    this.setState((prevState) => ({
+      tasks: [...prevState.tasks, newTask],
+    }));
+  };
   render() {
     return (
       <section id="todo">
         <Router>
           <Switch>
-            <Route path="/add-task" component={AddTask} />
+            <Route
+              path="/add-task"
+              render={(props) => (
+                <AddTask {...props} onAddTask={this.onAddTask} />
+              )}
+            />
             <Route
               path="/:filter?"
               render={(props) => (
