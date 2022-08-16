@@ -33,6 +33,15 @@ export default class App extends React.Component {
       tasks: [...prevState.tasks, newTask],
     }));
   };
+
+  onDeleteCompleted = () => {
+    this.setState((prevState) => {
+      let newState = prevState.tasks.filter((task) => !task.completed);
+      return {
+        tasks: newState,
+      };
+    });
+  };
   render() {
     return (
       <section id="todo">
@@ -55,7 +64,7 @@ export default class App extends React.Component {
               )}
             />
           </Switch>
-          <Footer />
+          <Footer onDeleteCompleted={this.onDeleteCompleted} />
         </Router>
       </section>
     );
