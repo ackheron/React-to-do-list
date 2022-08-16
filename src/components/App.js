@@ -3,12 +3,25 @@ import uniqueid from "uniqueid";
 import ToDoList from "./ToDoList";
 import Footer from "./Footer";
 import AddTask from "./AddTask";
+import Fetching from "./Fetching";
 import initialData from "../initialData";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default class App extends React.Component {
   state = {
-    tasks: initialData,
+    tasks: [],
+    fetching: true,
+  };
+
+  componentDidMount = () => {
+    let delay = Math.floor(Math.random() * 5000);
+
+    setTimeout(() => {
+      this.setState({
+        fetching: false,
+        tasks: initialData,
+      });
+    }, delay);
   };
 
   onToggleCompleted = (taskId) => {
@@ -45,6 +58,7 @@ export default class App extends React.Component {
   render() {
     return (
       <section id="todo">
+        {this.state.fetching ? <Fetching /> : null}
         <Router>
           <Switch>
             <Route
